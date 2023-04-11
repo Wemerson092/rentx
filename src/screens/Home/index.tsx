@@ -13,6 +13,17 @@ import {
 } from './styles';
 
 export function Home() {
+  const carData = {
+    brand: "Audi",
+    name: "RS 5 Coupé",
+    rent: {
+      period: "Ao dia",
+      price: 120
+    },
+    thumbnail: "https://platform.cstatic-images.com/xlarge/in/v2/stock_photos/a92a5dd1-2fc0-4f9c-a4e6-a0ae4c4cd938/565c4265-ce2f-4ba0-8043-365b097daabf.png"  
+  }
+
+
   return (
     <Container>
       <StatusBar
@@ -33,7 +44,7 @@ export function Home() {
         </HeaderContent>
       </Header>
 
-      <Car />
+      <Car data={carData}/>
     </Container>
   );
 }
