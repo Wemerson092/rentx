@@ -18,6 +18,7 @@ export const Container = styled.View`
 export const Details = styled.View`
 
 `;
+
 export const Brand = styled.Text`
   font-family: ${({theme}) => theme.fonts.secondary_500};
   color: ${({theme}) => theme.colors.title};

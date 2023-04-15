@@ -10,6 +10,7 @@ import {
   Header,
   TotalCars,
   HeaderContent,
+  CarList
 } from './styles';
 
 export function Home() {
@@ -20,7 +21,7 @@ export function Home() {
       period: "Ao dia",
       price: 120
     },
-    thumbnail: "https://platform.cstatic-images.com/xlarge/in/v2/stock_photos/a92a5dd1-2fc0-4f9c-a4e6-a0ae4c4cd938/565c4265-ce2f-4ba0-8043-365b097daabf.png"  
+    thumbnail: "https://platform.cstatic-images.com/xlarge/in/v2/stock_photos/a92a5dd1-2fc0-4f9c-a4e6-a0ae4c4cd938/565c4265-ce2f-4ba0-8043-365b097daabf.png"
   }
 
 
@@ -44,7 +45,14 @@ export function Home() {
         </HeaderContent>
       </Header>
 
-      <Car data={carData}/>
+      <CarList
+        data={[1, 2, 3, 4, 5, 6, 7]}
+        keyExtractor={item => String(item)}
+        renderItem={({ item }) => <Car data={carData} />}
+      >
+        <Car data={carData} />
+      </CarList>
+
     </Container>
   );
 }
